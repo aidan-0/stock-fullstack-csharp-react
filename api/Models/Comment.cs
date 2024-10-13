@@ -15,5 +15,7 @@ namespace api.Models
         public DateTime CreatedOn { get; set; } = DateTime.Now;
         public int? StockId { get; set; } // Navigation property (FK - Foreign Key) for Stock
         public Stock? Stock { get; set; } // Navigation property for Stock.cs model
+        public string AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
     }
 }
