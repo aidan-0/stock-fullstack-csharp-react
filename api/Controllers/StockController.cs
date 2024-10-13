@@ -7,6 +7,7 @@ using api.DTOs.Stock;
 using api.Helpers;
 using api.Interfaces;
 using api.Mappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Update.Internal;
@@ -27,6 +28,7 @@ namespace api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         // Read
         public async Task<IActionResult> GetAll([FromQuery] QueryObject query)
         {
